@@ -1,0 +1,93 @@
+@media (min-width: 810px) {
+  .dzignex-mac-control-group { pointer-events: auto !important; }
+
+  .dzignex-window-control {
+    position: relative !important;
+    cursor: pointer !important;
+    transform: none !important;
+    filter: none !important;
+    transition: filter 70ms ease !important;
+  }
+
+  .dzignex-window-control:hover {
+    transform: none !important;
+    filter: brightness(1.04) !important;
+  }
+
+  .dzignex-window-control::after {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: #3a241f;
+    font: 800 10px/1 Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 0.15px currentColor;
+    -webkit-font-smoothing: antialiased;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 35ms linear;
+  }
+
+  .dzignex-mac-control-group.dzignex-mac-controls-hovered .dzignex-window-control::after { opacity: 1; }
+  .dzignex-window-control--close::after { content: "×"; transform: translateY(-0.2px); }
+  .dzignex-window-control--minimize::after { content: "−"; transform: translateY(-0.7px); }
+  .dzignex-window-control--fullscreen::after { content: "+"; transform: translateY(-0.2px); }
+
+  .dzignex-window-is-closed {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .dzignex-window--minimized {
+    height: 52px !important;
+    min-height: 52px !important;
+    max-height: 52px !important;
+    overflow: hidden !important;
+  }
+
+  .framer-JaU20.framer-12ztidk-container.dzignex-window--minimized {
+    top: var(--dzignex-minimized-top) !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: var(--dzignex-minimized-left) !important;
+    width: var(--dzignex-minimized-width) !important;
+    transform: none !important;
+  }
+
+  .dzignex-window--fullscreen {
+    position: fixed !important;
+    inset: 20px !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
+    z-index: 2147482000 !important;
+  }
+
+  /* Let About Me fill the window using its original flow, like Notes. */
+  .framer-JaU20.framer-12ztidk-container.dzignex-window--fullscreen > .framer-epjgij,
+  .framer-JaU20.framer-12ztidk-container.dzignex-window--fullscreen [data-framer-name="Wrapper"] {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  .framer-JaU20.framer-12ztidk-container.dzignex-window--fullscreen [data-framer-name="Content"] {
+    width: 100% !important;
+    height: calc(100% - 40px) !important;
+    max-width: none !important;
+    max-height: none !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    overflow-y: auto !important;
+  }
+}
+
+@media (max-width: 809.98px) {
+  .dzignex-window-control,
+  .dzignex-mac-control-group { cursor: inherit !important; }
+}
