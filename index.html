@@ -225,9 +225,11 @@
 
             [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container {
                 width: calc(100vw - 32px) !important;
-                height: min(620px, calc(100dvh - 96px)) !important;
-                max-height: min(620px, calc(100dvh - 96px)) !important;
+                height: auto !important;
+                max-height: none !important;
                 top: 24px !important;
+                right: auto !important;
+                bottom: calc(124px + env(safe-area-inset-bottom, 0px)) !important;
                 left: 16px !important;
                 transform: none !important;
             }
@@ -248,10 +250,24 @@
 
             [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] {
                 height: calc(100% - 40px) !important;
+                min-height: 0 !important;
                 max-height: none !important;
-                overflow: hidden !important;
-                -webkit-overflow-scrolling: auto !important;
+                overflow-x: hidden !important;
+                overflow-y: auto !important;
+                overscroll-behavior: contain !important;
+                -webkit-overflow-scrolling: touch !important;
+                touch-action: pan-y !important;
+                scrollbar-width: none !important;
                 justify-content: flex-start !important;
+                padding-bottom: 12px !important;
+            }
+
+            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"]::-webkit-scrollbar {
+                display: none !important;
+            }
+
+            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > * {
+                flex-shrink: 0 !important;
             }
 
             [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(1) {
@@ -1085,6 +1101,9 @@
         }());
     </script>
     <script src="mac-window-controls.js?v=20260824-7"></script>
+    <script src="about-email-link.js?v=20260824-2"></script>
+    <script src="notes-content-sync.js?v=20260825-1"></script>
+    <script src="/mobile-project-images.js?v=20260825-5"></script>
     <style>#__framer-badge-container { display: none !important; }</style>
     <style>#__framer-badge-container { display: none !important; }</style>
     <!-- End of bodyEnd -->
