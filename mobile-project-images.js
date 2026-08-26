@@ -2,6 +2,25 @@
   'use strict';
 
   var mobileQuery = window.matchMedia('(max-width: 809.98px)');
+  var projectPathPattern = /^\/works\/[^/?#]+(?:\.html)?$/;
+
+  window.addEventListener('click', function (event) {
+    if (!mobileQuery.matches || event.defaultPrevented || event.button !== 0) return;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (!(event.target instanceof Element)) return;
+
+    var link = event.target.closest('a[href]');
+    if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
+
+    var destination = new URL(link.href, window.location.href);
+    if (destination.origin !== window.location.origin) return;
+    if (!projectPathPattern.test(destination.pathname)) return;
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    window.location.assign(destination.href);
+  }, true);
+
   if (!mobileQuery.matches) return;
 
   var projectImages = {

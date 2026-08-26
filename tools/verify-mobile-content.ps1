@@ -32,7 +32,7 @@ if (-not (Test-Path -LiteralPath $projectScriptPath)) {
 $projectScript = Get-Content -Raw -LiteralPath $projectScriptPath
 Assert-Contains `
     -Text $index `
-    -Pattern '<script src="/mobile-project-images\.js\?v=20260825-5"></script>' `
+    -Pattern '<script src="/mobile-project-images\.js\?v=20260826-1"></script>' `
     -Message 'The homepage must load the mobile project image fix for its inline project windows.'
 Assert-Contains `
     -Text $projectScript `
@@ -119,7 +119,7 @@ foreach ($projectFile in $projectFiles) {
     $projectHtml = Get-Content -Raw -LiteralPath $projectFile.FullName
     Assert-Contains `
         -Text $projectHtml `
-        -Pattern '<script src="\.\./mobile-project-images\.js\?v=20260825-5"></script>' `
+        -Pattern '<script src="\.\./mobile-project-images\.js\?v=20260826-1"></script>' `
         -Message "$($projectFile.Name) does not load the mobile project image fix."
 }
 

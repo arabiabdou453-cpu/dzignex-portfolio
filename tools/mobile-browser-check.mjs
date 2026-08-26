@@ -119,7 +119,10 @@ if (aboutMetrics?.aboutFound !== false) {
 
 await navigate('/index.html?v=mobile-home-project-check');
 const homeProjectClicked = await evaluate(`(() => {
-  const links = Array.from(document.querySelectorAll('a[href="works/noua.html"]'));
+  const links = Array.from(document.querySelectorAll('a[href]')).filter((candidate) => {
+    const href = candidate.getAttribute('href') || '';
+    return /(?:^|\\/)works\\/noua(?:\\.html)?(?:[?#].*)?$/.test(href);
+  });
   const link = links.find((candidate) => {
     const rect = candidate.getBoundingClientRect();
     return rect.width > 0 && rect.height > 0;
@@ -134,6 +137,9 @@ await delay(2200);
 
 const homeProjectResult = await evaluate(`(async () => {
   const imageStem = 'BwQJ2mVbLRbaFgM7D1uM8ufU179f';
+  const navigationEntry = performance.getEntriesByType('navigation')[0];
+  const navigationPath = navigationEntry ? new URL(navigationEntry.name).pathname : '';
+  const fullPageNavigation = navigationPath.replace(/\\.html$/, '') === '/works/noua';
   const getVisibleImage = () => Array.from(document.querySelectorAll('img[src*="' + imageStem + '"]')).find((image) => {
     const rect = image.getBoundingClientRect();
     const style = getComputedStyle(image);
@@ -151,6 +157,8 @@ const homeProjectResult = await evaluate(`(async () => {
   if (!image) {
     return {
       path: location.pathname,
+      navigationPath,
+      fullPageNavigation,
       found: document.querySelectorAll('img[src*="' + imageStem + '"]').length,
       rendered: false,
       loaded: false,
@@ -167,6 +175,8 @@ const homeProjectResult = await evaluate(`(async () => {
   const rect = image.getBoundingClientRect();
   return {
     path: location.pathname,
+    navigationPath,
+    fullPageNavigation,
     found: 1,
     rendered: rect.width > 1 && rect.height > 1,
     loaded: image.complete && image.naturalWidth > 0,
@@ -174,6 +184,10 @@ const homeProjectResult = await evaluate(`(async () => {
     height: Math.round(rect.height)
   };
 })()`);
+
+if (!homeProjectResult.fullPageNavigation) {
+  throw new Error(`Mobile project link used client-side navigation instead of a full page load: ${JSON.stringify(homeProjectResult)}`);
+}
 
 if (!homeProjectResult.rendered || !homeProjectResult.loaded) {
   throw new Error(`Maison NOUA missing image did not appear through the homepage flow: ${JSON.stringify(homeProjectResult)}`);
