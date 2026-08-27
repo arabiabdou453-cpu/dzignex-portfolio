@@ -16,12 +16,12 @@ $index = Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot '..\index.html')
 
 Assert-Contains `
     -Text $index `
-    -Pattern 'data-dzignex-mobile-fix[\s\S]*?AboutMeOverlay[\s\S]*?bottom:\s*calc\(124px\s*\+\s*env\(safe-area-inset-bottom,\s*0px\)\)' `
+    -Pattern 'data-dzignex-mobile-fix[\s\S]*?\.framer-JaU20\.framer-12ztidk-container[\s\S]*?bottom:\s*calc\(124px\s*\+\s*env\(safe-area-inset-bottom,\s*0px\)\)' `
     -Message 'About Me must stop above the mobile dock and safe area.'
 
 Assert-Contains `
     -Text $index `
-    -Pattern 'AboutMeOverlay[\s\S]*?data-framer-name="Content"[\s\S]*?overflow-y:\s*auto\s*!important' `
+    -Pattern '\.framer-JaU20\.framer-12ztidk-container[\s\S]*?data-framer-name="Content"[\s\S]*?overflow-y:\s*auto\s*!important' `
     -Message 'About Me content must scroll vertically on mobile.'
 
 $projectScriptPath = Join-Path $PSScriptRoot '..\mobile-project-images.js'
@@ -32,7 +32,7 @@ if (-not (Test-Path -LiteralPath $projectScriptPath)) {
 $projectScript = Get-Content -Raw -LiteralPath $projectScriptPath
 Assert-Contains `
     -Text $index `
-    -Pattern '<script src="/mobile-project-images\.js\?v=20260826-1"></script>' `
+    -Pattern '<script src="/mobile-project-images\.js\?v=20260827-1"></script>' `
     -Message 'The homepage must load the mobile project image fix for its inline project windows.'
 Assert-Contains `
     -Text $projectScript `
@@ -119,7 +119,7 @@ foreach ($projectFile in $projectFiles) {
     $projectHtml = Get-Content -Raw -LiteralPath $projectFile.FullName
     Assert-Contains `
         -Text $projectHtml `
-        -Pattern '<script src="\.\./mobile-project-images\.js\?v=20260826-1"></script>' `
+        -Pattern '<script src="\.\./mobile-project-images\.js\?v=20260827-1"></script>' `
         -Message "$($projectFile.Name) does not load the mobile project image fix."
 }
 

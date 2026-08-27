@@ -208,22 +208,27 @@
                 overflow-y: auto !important;
             }
 
-            [data-framer-name="NoteOverlay"] + .framer-1vc6fcr-container {
+            .framer-JaU20.framer-1vc6fcr-container {
+                position: fixed !important;
                 width: calc(100vw - 48px) !important;
-                height: min(620px, calc(100dvh - 120px)) !important;
+                height: min(620px, calc(100dvh - 224px - env(safe-area-inset-bottom, 0px))) !important;
                 top: 50% !important;
+                right: auto !important;
+                bottom: auto !important;
                 left: 50% !important;
+                margin: 0 !important;
                 transform: translate(-50%, -50%) !important;
             }
 
-            [data-framer-name="NoteOverlay"] + .framer-1vc6fcr-container [data-framer-name="(Mobile) About"] {
+            .framer-JaU20.framer-1vc6fcr-container [data-framer-name="(Mobile) About"] {
                 top: 0 !important;
                 left: 0 !important;
                 width: 100% !important;
                 height: 100% !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container {
+            .framer-JaU20.framer-12ztidk-container {
+                position: fixed !important;
                 width: calc(100vw - 32px) !important;
                 height: auto !important;
                 max-height: none !important;
@@ -231,24 +236,25 @@
                 right: auto !important;
                 bottom: calc(124px + env(safe-area-inset-bottom, 0px)) !important;
                 left: 16px !important;
+                margin: 0 !important;
                 transform: none !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container > .framer-epjgij,
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Wrapper"] {
+            .framer-JaU20.framer-12ztidk-container > .framer-epjgij,
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Wrapper"] {
                 width: 100% !important;
                 height: 100% !important;
                 max-height: 100% !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container > .framer-epjgij {
+            .framer-JaU20.framer-12ztidk-container > .framer-epjgij {
                 zoom: 1 !important;
                 width: 100% !important;
                 height: 100% !important;
                 transform-origin: top left !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] {
                 height: calc(100% - 40px) !important;
                 min-height: 0 !important;
                 max-height: none !important;
@@ -262,86 +268,97 @@
                 padding-bottom: 12px !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"]::-webkit-scrollbar {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"]::-webkit-scrollbar {
                 display: none !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > * {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > * {
                 flex-shrink: 0 !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(1) {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(1) {
                 flex: 0 0 34px !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(1) h2 {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(1) h2 {
                 font-size: 24px !important;
                 line-height: 1.1 !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) {
-                flex: 0 0 100px !important;
-                height: 100px !important;
-                min-height: 100px !important;
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) {
+                flex: 0 0 88px !important;
+                height: 88px !important;
+                min-height: 88px !important;
+                gap: 12px !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) img {
-                width: 100px !important;
-                height: 100px !important;
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:first-child,
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:first-child > [data-framer-background-image-wrapper] {
+                flex: 0 0 88px !important;
+                width: 88px !important;
+                min-width: 88px !important;
+                height: 88px !important;
+                min-height: 88px !important;
+                transform: translate(-8px, -10px) !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) img {
+                width: 88px !important;
+                height: 88px !important;
+            }
+
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div {
                 min-width: 0 !important;
                 overflow: visible !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div p {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div p {
                 font-size: 13px !important;
                 line-height: 1.15 !important;
                 white-space: normal !important;
                 overflow-wrap: anywhere !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container .framer-1uvddpl {
+            .framer-JaU20.framer-12ztidk-container .framer-1uvddpl {
                 height: auto !important;
                 min-height: 24px !important;
                 overflow: visible !important;
                 align-items: flex-start !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container .framer-1uvddpl p {
+            .framer-JaU20.framer-12ztidk-container .framer-1uvddpl p {
                 font-size: 12px !important;
                 line-height: 1.15 !important;
                 white-space: normal !important;
                 overflow-wrap: break-word !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:nth-child(2) > div {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:nth-child(2) > div {
                 height: auto !important;
                 min-height: 24px !important;
                 overflow: visible !important;
                 align-items: flex-start !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(2) p {
-                width: 105px !important;
-                max-width: 105px !important;
-                white-space: normal !important;
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(2) > div:nth-child(2) > div:first-child > div:nth-child(2) p {
+                width: auto !important;
+                max-width: none !important;
+                white-space: nowrap !important;
                 overflow: visible !important;
                 overflow-wrap: break-word !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(3) {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(3) {
                 flex: 0 0 auto !important;
                 padding: 10px !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(3) p {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > div:nth-child(3) p {
                 font-size: 13px !important;
                 line-height: 1.25 !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > .framer-zg2zp0-container {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > .framer-zg2zp0-container {
                 width: calc(100% - 20px) !important;
                 align-self: flex-end !important;
                 position: relative !important;
@@ -352,22 +369,22 @@
                 margin-top: 8px !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"] > .framer-zg2zp0-container a {
+            .framer-JaU20.framer-12ztidk-container [data-framer-name="Content"] > .framer-zg2zp0-container a {
                 width: 100% !important;
                 justify-content: center !important;
                 white-space: nowrap !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container .framer-1uvddpl {
+            .framer-JaU20.framer-12ztidk-container .framer-1uvddpl {
                 min-width: 0 !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container .framer-artzz {
+            .framer-JaU20.framer-12ztidk-container .framer-artzz {
                 flex: 1 1 auto !important;
                 min-width: 0 !important;
             }
 
-            [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container .framer-artzz p {
+            .framer-JaU20.framer-12ztidk-container .framer-artzz p {
                 white-space: normal !important;
                 overflow-wrap: anywhere !important;
             }
@@ -1088,7 +1105,7 @@
                 if (!target || !['About', 'About Me'].includes(target.textContent.trim())) return;
 
                 window.setTimeout(function () {
-                    Array.from(document.querySelectorAll('[data-framer-name="About"], [data-framer-name="AboutMeOverlay"] + .framer-12ztidk-container [data-framer-name="Content"]'))
+                    Array.from(document.querySelectorAll('[data-framer-name="About"], .framer-12ztidk-container [data-framer-name="Content"]'))
                         .filter(function (panel) {
                             var rect = panel.getBoundingClientRect();
                             return rect.width > 0 && rect.height > 0;
@@ -1103,7 +1120,7 @@
     <script src="mac-window-controls.js?v=20260824-7"></script>
     <script src="about-email-link.js?v=20260824-2"></script>
     <script src="notes-content-sync.js?v=20260825-1"></script>
-    <script src="/mobile-project-images.js?v=20260826-1"></script>
+    <script src="/mobile-project-images.js?v=20260827-1"></script>
     <style>#__framer-badge-container { display: none !important; }</style>
     <style>#__framer-badge-container { display: none !important; }</style>
     <!-- End of bodyEnd -->

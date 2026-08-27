@@ -3,6 +3,7 @@
 
   var mobileQuery = window.matchMedia('(max-width: 809.98px)');
   var projectPathPattern = /^\/works\/[^/?#]+(?:\.html)?$/;
+  var homePathPattern = /^\/(?:index\.html)?$/;
 
   window.addEventListener('click', function (event) {
     if (!mobileQuery.matches || event.defaultPrevented || event.button !== 0) return;
@@ -14,7 +15,11 @@
 
     var destination = new URL(link.href, window.location.href);
     if (destination.origin !== window.location.origin) return;
-    if (!projectPathPattern.test(destination.pathname)) return;
+
+    var opensProject = projectPathPattern.test(destination.pathname);
+    var returnsHome = projectPathPattern.test(window.location.pathname)
+      && homePathPattern.test(destination.pathname);
+    if (!opensProject && !returnsHome) return;
 
     event.preventDefault();
     event.stopImmediatePropagation();

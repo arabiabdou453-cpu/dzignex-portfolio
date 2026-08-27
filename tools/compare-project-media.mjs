@@ -89,6 +89,8 @@ const collect = async ({ width, height, mobile }) => {
         display: style.display,
         visibility: style.visibility,
         opacity: style.opacity,
+        objectFit: style.objectFit,
+        objectPosition: style.objectPosition,
         rendered: rect.width > 1 && rect.height > 1 && style.display !== 'none' && style.visibility !== 'hidden',
         names: ancestorNames(element)
       };

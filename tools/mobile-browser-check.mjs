@@ -193,6 +193,37 @@ if (!homeProjectResult.rendered || !homeProjectResult.loaded) {
   throw new Error(`Maison NOUA missing image did not appear through the homepage flow: ${JSON.stringify(homeProjectResult)}`);
 }
 
+const homeReturnClicked = await evaluate(`(() => {
+  const link = Array.from(document.querySelectorAll('a[href]')).find((candidate) => {
+    const destination = new URL(candidate.href, location.href);
+    const rect = candidate.getBoundingClientRect();
+    return destination.origin === location.origin && destination.pathname === '/' && rect.width > 0 && rect.height > 0;
+  });
+  if (!link) return false;
+  link.click();
+  return true;
+})()`);
+
+if (!homeReturnClicked) throw new Error('Could not use the project window home control.');
+await delay(2200);
+
+const homeReturnResult = await evaluate(`(() => {
+  const navigationEntry = performance.getEntriesByType('navigation')[0];
+  const navigationPath = navigationEntry ? new URL(navigationEntry.name).pathname : '';
+  const root = document.querySelector('[data-framer-root]');
+  return {
+    path: location.pathname,
+    navigationPath,
+    fullPageNavigation: navigationPath === '/',
+    rootClass: root ? root.className : '',
+    mobileFixPresent: Boolean(document.querySelector('style[data-dzignex-mobile-fix]'))
+  };
+})()`);
+
+if (!homeReturnResult.fullPageNavigation || !homeReturnResult.mobileFixPresent) {
+  throw new Error(`Project return reused the broken desktop homepage state: ${JSON.stringify(homeReturnResult)}`);
+}
+
 const projects = [
   'auravita.html',
   'champ-dermology.html',
@@ -228,4 +259,4 @@ if (failedProjects.length > 0) {
 }
 
 socket.close();
-console.log(JSON.stringify({ aboutMetrics, homeProjectResult, projectResults }, null, 2));
+console.log(JSON.stringify({ aboutMetrics, homeProjectResult, homeReturnResult, projectResults }, null, 2));
