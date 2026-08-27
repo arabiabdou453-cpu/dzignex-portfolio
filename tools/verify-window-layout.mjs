@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 
 const source = await readFile(new URL('../index.html', import.meta.url), 'utf8');
 const menotopia = await readFile(new URL('../works/menotopia.html', import.meta.url), 'utf8');
+const menotopiaCover = await readFile(new URL('../framerusercontent.com/images/menotopia-presentation-cover-2.jpg', import.meta.url));
 const mobileFix = source.match(/<style data-dzignex-mobile-fix>([\s\S]*?)<\/style>/);
 
 assert.ok(mobileFix, 'The mobile window-fix stylesheet must exist.');
@@ -48,9 +49,11 @@ assert.doesNotMatch(
 
 assert.match(
   menotopia,
-  /\[data-framer-name="Image 1"\]\s*\{[^}]*aspect-ratio:\s*1920\s*\/\s*1201\s*!important;[^}]*\}\s*\[data-framer-name="Image 1"\]\s+img\s*\{[^}]*object-fit:\s*contain\s*!important;[^}]*object-position:\s*center\s*!important;/s,
-  'Only Menotopia Image 1 must preserve its original ratio without cropping.'
+  /\[data-framer-name="Image 1"\]\s*\{[^}]*aspect-ratio:\s*1920\s*\/\s*1464\s*!important;[^}]*\}\s*\[data-framer-name="Image 1"\]\s*>\s*\[data-framer-background-image-wrapper\]\s*\{[^}]*background:\s*url\(["']?\.\.\/framerusercontent\.com\/images\/menotopia-presentation-cover-2\.jpg["']?\)\s+center\s*\/\s*contain\s+no-repeat\s*!important;[^}]*\}\s*\[data-framer-name="Image 1"\]\s+img\s*\{[^}]*opacity:\s*0\s*!important;/s,
+  'Only Menotopia Image 1 must render the designer-provided full-resolution source without cropping.'
 );
+
+assert.ok(menotopiaCover.byteLength > 1_000_000, 'The full-resolution Menotopia cover asset must be present.');
 
 assert.match(
   css,
