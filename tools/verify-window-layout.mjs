@@ -62,6 +62,12 @@ assert.match(
 assert.ok(menotopiaCover.byteLength > 1_000_000, 'The full-resolution Menotopia cover asset must be present.');
 
 assert.match(
+  source,
+  /@media\s*\(min-width:\s*810px\)\s*\{[^}]*\[data-framer-background-image-wrapper\]:has\(>\s*img\[src\*="8IyXbpLUuXdmj11EEN2UhNkQ"\]\)\s*\{[^}]*menotopia-presentation-cover-2\.jpg[^}]*\}/s,
+  'The desktop Menotopia card must use the corrected cover instead of its old thumbnail.'
+);
+
+assert.match(
   css,
   /\.framer-JaU20\.framer-1vc6fcr-container\s*\{[^}]*width:\s*calc\(100vw\s*-\s*48px\)\s*!important;[^}]*height:\s*min\(620px,\s*calc\(100dvh\s*-\s*224px\s*-\s*env\(safe-area-inset-bottom,\s*0px\)\)\)\s*!important;[^}]*top:\s*50%\s*!important;[^}]*left:\s*50%\s*!important;[^}]*transform:\s*translate\(-50%,\s*-50%\)\s*!important;/s,
   'Notes must have a direct, viewport-safe mobile layout rule.'
