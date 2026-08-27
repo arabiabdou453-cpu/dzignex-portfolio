@@ -49,6 +49,12 @@ assert.doesNotMatch(
 
 assert.match(
   menotopia,
+  /\[data-framer-name="Thumbnail"\]\s*\{[^}]*display:\s*none\s*!important;/s,
+  'The outdated Menotopia thumbnail must be hidden on every breakpoint.'
+);
+
+assert.match(
+  menotopia,
   /\[data-framer-name="Image 1"\]\s*\{[^}]*aspect-ratio:\s*1920\s*\/\s*1464\s*!important;[^}]*\}\s*\[data-framer-name="Image 1"\]\s*>\s*\[data-framer-background-image-wrapper\]\s*\{[^}]*background:\s*url\(["']?\.\.\/framerusercontent\.com\/images\/menotopia-presentation-cover-2\.jpg["']?\)\s+center\s*\/\s*contain\s+no-repeat\s*!important;[^}]*\}\s*\[data-framer-name="Image 1"\]\s+img\s*\{[^}]*opacity:\s*0\s*!important;/s,
   'Only Menotopia Image 1 must render the designer-provided full-resolution source without cropping.'
 );
