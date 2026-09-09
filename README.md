@@ -2,7 +2,7 @@
 
   <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&amp;weight=700&amp;size=30&amp;duration=3200&amp;pause=1200&amp;color=FF5F57&amp;center=true&amp;vCenter=true&amp;width=850&amp;height=70&amp;lines=DZIGNEX;Brand+Identity+%7C+Packaging;Ideas%2C+made+visible" alt="Dzignex animated title" />
 
-  <p><strong>Brand identity, packaging, art direction and digital experiences built to make brands recognizable.</strong></p>
+  <p><strong>Premium art direction, brand identity, packaging and digital experiences for ambitious brands.</strong></p>
 
   <p>
     <a href="https://dzignex.me/"><img src="https://img.shields.io/badge/Live%20Portfolio-FF5F57?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="Visit the live portfolio" /></a>
@@ -25,19 +25,19 @@
 
 ## ✦ The experience
 
-Dzignex is the creative portfolio of **Mohamed Elamine Chaib (Amine)** — an Algerian Senior Creative Designer and the Co-Founder / Creative Director of Dzignex Studio. The experience is built around one idea: understand what makes a brand different, then turn that difference into a visual system people can recognize.
+Dzignex is the creative portfolio of **Mohamed Elamine Chaib (Amine)** — an Algerian Senior Creative Designer and the Co-Founder / Creative Director of Dzignex Studio. The experience is built around one idea: turn distinctive ideas into clear visual systems that make brands easier to recognize, trust and remember.
 
-From the first project card to the final case-study image, the portfolio combines a soft neutral desktop, macOS-inspired windows, confident typography, restrained motion and image-led storytelling.
+From the first project card to the final case-study image, the portfolio combines a soft neutral desktop, macOS-inspired windows, confident typography, restrained motion and carefully structured, image-led storytelling.
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>✦ Brand identity</h3>
-      <p>Distinctive identity systems that connect positioning, logo, color, typography and practical brand applications.</p>
+      <h3>🎯 Art direction</h3>
+      <p>Creative concepts and visual direction shaped around each brand's purpose, audience and ambition.</p>
     </td>
     <td width="50%" valign="top">
-      <h3>🎯 Art direction</h3>
-      <p>One focused visual idea translated across imagery, composition, campaigns and every visible brand touchpoint.</p>
+      <h3>✦ Brand identity</h3>
+      <p>Distinctive identity systems that connect strategy, logo, color, typography and practical applications.</p>
     </td>
   </tr>
   <tr>
@@ -46,8 +46,8 @@ From the first project card to the final case-study image, the portfolio combine
       <p>Product systems shaped for recognition, shelf presence and a coherent experience across formats.</p>
     </td>
     <td width="50%" valign="top">
-      <h3>🖥 Digital experiences</h3>
-      <p>Websites and interfaces designed for clarity, usability and a consistent expression of the brand.</p>
+      <h3>◇ Digital craft</h3>
+      <p>Websites and digital experiences designed for clarity, usability and a consistent brand presence.</p>
     </td>
   </tr>
 </table>
@@ -56,47 +56,38 @@ From the first project card to the final case-study image, the portfolio combine
 
 | <img src="https://img.icons8.com/fluency/24/idea.png" alt="Idea" /> Stage | What it delivers |
 | --- | --- |
-| **Research & direction** | Business understanding, visual research, positioning and a focused creative direction |
-| **Identity & packaging** | Logo systems, typography, color, packaging and complete brand applications |
+| **Research & strategy** | Discovery, audience understanding, visual research, positioning and a focused creative direction |
+| **Identity & design** | Logo systems, typography, color, art direction, packaging and complete brand applications |
 | **Digital & campaign delivery** | Websites, digital experiences, campaign visuals and polished final assets |
-
-## 🗂 Selected work
-
-| Project | Creative focus |
-| --- | --- |
-| **[Menotopia](https://dzignex.me/works/menotopia)** | Packaging for a French skincare brand |
-| **[Auravita](https://dzignex.me/works/auravita)** | Brand identity and packaging for a nutricosmetics brand |
-| **[Dermology](https://dzignex.me/works/champ-dermology)** | Identity, packaging and website design for Algerian skincare |
-| **[Formura Labs](https://dzignex.me/works/formura-labs)** | Branding for an Algerian supplement manufacturer |
-| **[Maison Noua](https://dzignex.me/works/noua)** | Identity refresh and packaging for an Algerian fragrance house |
-| **[Ops First](https://dzignex.me/works/ops-first)** | Brand experience for an operations consultancy |
 
 ## ⚡ Portfolio features
 
 <p align="center">
-  <img src="https://img.shields.io/badge/01-Interactive%20windows-FF5F57?style=for-the-badge" alt="Interactive windows" />
-  <img src="https://img.shields.io/badge/02-Case%20study%20flow-FF5F57?style=for-the-badge" alt="Case study flow" />
+  <img src="https://img.shields.io/badge/01-Case%20study%20flow-FF5F57?style=for-the-badge" alt="Case study flow" />
+  <img src="https://img.shields.io/badge/02-Smooth%20navigation-FF5F57?style=for-the-badge" alt="Smooth navigation" />
   <img src="https://img.shields.io/badge/03-Touch%20friendly-FF5F57?style=for-the-badge" alt="Touch friendly" />
   <img src="https://img.shields.io/badge/04-Responsive%20layout-FF5F57?style=for-the-badge" alt="Responsive layout" />
 </p>
 
-- **Desktop-inspired workspace** with draggable project, About me and Notes windows.
-- **Dedicated case studies** with image-led presentations for six selected projects.
+- **Selected project gallery** with focused case studies and image-led storytelling.
+- **Clear project presentation** covering context, creative direction and final applications.
+- **Desktop-inspired navigation** with draggable project, About me and Notes windows.
 - **Responsive layouts** tuned for desktop, tablet and mobile screens.
-- **Stable project return flow** that preserves the interface after opening and closing work.
-- **Locally hosted project imagery** for consistent presentation and loading.
+- **Smooth return navigation** that brings visitors back to the exact project entry point.
+- **Performance-minded loading** with locally hosted project imagery and responsive delivery.
+- **Accessible interaction** with meaningful labels, keyboard-friendly controls and reduced-motion support.
 - **Direct contact paths** through email, Behance, Instagram and LinkedIn.
 
 ## 🎨 Visual language
 
 <p align="center">
   <img src="https://img.shields.io/badge/Canvas-Soft%20Neutral-6B6B6B?style=for-the-badge" alt="Soft neutral canvas" />
-  <img src="https://img.shields.io/badge/Interface-macOS%20Windows-111111?style=for-the-badge" alt="macOS-inspired windows" />
-  <img src="https://img.shields.io/badge/Accent-Traffic%20Lights-FF5F57?style=for-the-badge" alt="Traffic-light accent" />
-  <img src="https://img.shields.io/badge/Motion-Responsive-4F4F4F?style=for-the-badge" alt="Responsive motion" />
+  <img src="https://img.shields.io/badge/Accent-Coral%20Red-FF5F57?style=for-the-badge" alt="Coral red accent" />
+  <img src="https://img.shields.io/badge/Direction-Image%20Led-111111?style=for-the-badge" alt="Image-led direction" />
+  <img src="https://img.shields.io/badge/Motion-Restrained-4F4F4F?style=for-the-badge" alt="Restrained motion" />
 </p>
 
-The interface keeps the work at the center: a soft grey desktop, white floating windows, familiar red-yellow-green controls, rounded project cards and a dock that keeps the main actions within reach.
+The interface keeps the visual system deliberately focused: a soft grey desktop, white floating windows, coral-red accents, rounded project frames, confident typography and motion that supports the work instead of competing with it.
 
 ## 🧭 Site map
 
